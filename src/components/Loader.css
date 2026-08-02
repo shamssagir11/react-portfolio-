@@ -1,0 +1,377 @@
+/* ===========================
+   FULL SCREEN
+=========================== */
+
+.loader {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #050816;
+    z-index: 99999;
+}
+
+/* ===========================
+   BACKGROUND GLOW
+=========================== */
+
+.bg-glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: .45;
+}
+
+.glow1 {
+    width: 350px;
+    height: 350px;
+    background: #2563EB;
+    top: -120px;
+    left: -100px;
+    animation: glowMove1 8s ease-in-out infinite;
+}
+
+.glow2 {
+    width: 400px;
+    height: 400px;
+    background: #7C3AED;
+    right: -120px;
+    bottom: -120px;
+    animation: glowMove2 9s ease-in-out infinite;
+}
+
+@keyframes glowMove1 {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(80px, 70px);
+    }
+
+}
+
+@keyframes glowMove2 {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(-80px, -70px);
+    }
+
+}
+
+/* ===========================
+   CONTENT
+=========================== */
+
+.loader-content {
+
+    position: relative;
+
+    z-index: 5;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+}
+
+/* ===========================
+   LOGO RING
+=========================== */
+
+.logo-ring {
+
+    position: relative;
+
+    width: 170px;
+
+    height: 170px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    margin-bottom: 30px;
+
+}
+
+.ring {
+
+    position: absolute;
+
+    width: 170px;
+
+    height: 170px;
+
+    border-radius: 50%;
+
+    border: 4px solid transparent;
+
+    border-top: 4px solid #2563EB;
+
+    border-right: 4px solid #7C3AED;
+
+    animation: rotateRing 2s linear infinite;
+
+}
+
+@keyframes rotateRing {
+
+    100% {
+
+        transform: rotate(360deg);
+
+    }
+
+}
+
+/* ===========================
+   SS LOGO
+=========================== */
+
+.loader-logo {
+
+    width: 125px;
+
+    height: 125px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: rgba(255, 255, 255, .08);
+
+    backdrop-filter: blur(15px);
+
+    border: 1px solid rgba(255, 255, 255, .15);
+
+    box-shadow: 0 0 40px rgba(37, 99, 235, .45);
+
+}
+
+.logo h1 {
+
+    font-size: 48px;
+
+    font-weight: 800;
+
+    color: white;
+
+    letter-spacing: 3px;
+
+}
+
+/* ===========================
+   TEXT
+=========================== */
+
+.loader-content h2 {
+
+    font-size: 34px;
+
+    color: white;
+
+    margin-bottom: 8px;
+
+}
+
+.loader-content p {
+
+    color: #CBD5E1;
+
+    font-size: 16px;
+
+    margin-bottom: 35px;
+
+}
+
+/* ===========================
+   LOADING LINE
+=========================== */
+
+.loading-line {
+
+    width: 260px;
+
+    height: 6px;
+
+    background: rgba(255, 255, 255, .08);
+
+    border-radius: 50px;
+
+    overflow: hidden;
+
+}
+
+.loading-line span {
+
+    display: block;
+
+    width: 0;
+
+    height: 100%;
+
+    background: linear-gradient(90deg,
+            #2563EB,
+            #7C3AED,
+            #38BDF8);
+
+    animation: loading 2.3s linear forwards;
+
+}
+
+@keyframes loading {
+
+    100% {
+
+        width: 100%;
+
+    }
+
+}
+
+/* ===========================
+   PARTICLES
+=========================== */
+
+.particles span {
+
+    position: absolute;
+
+    width: 8px;
+
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    opacity: .45;
+
+    animation: particle 8s linear infinite;
+
+}
+
+.particles span:nth-child(1) {
+
+    left: 12%;
+    top: 25%;
+
+}
+
+.particles span:nth-child(2) {
+
+    left: 82%;
+    top: 18%;
+
+    animation-delay: 1s;
+
+}
+
+.particles span:nth-child(3) {
+
+    left: 22%;
+    bottom: 18%;
+
+    animation-delay: 2s;
+
+}
+
+.particles span:nth-child(4) {
+
+    right: 16%;
+    bottom: 25%;
+
+    animation-delay: 3s;
+
+}
+
+.particles span:nth-child(5) {
+
+    left: 50%;
+    top: 10%;
+
+    animation-delay: 4s;
+
+}
+
+.particles span:nth-child(6) {
+
+    left: 60%;
+    bottom: 8%;
+
+    animation-delay: 5s;
+
+}
+
+@keyframes particle {
+
+    0% {
+
+        transform: translateY(0) scale(1);
+
+        opacity: .2;
+
+    }
+
+    50% {
+
+        transform: translateY(-40px) scale(1.4);
+
+        opacity: 1;
+
+    }
+
+    100% {
+
+        transform: translateY(0);
+
+        opacity: .2;
+
+    }
+
+}
+
+/* ===========================
+   LOADER EXIT
+=========================== */
+
+/* .loader {
+
+    animation: loaderExit .6s ease forwards;
+
+    animation-delay: 2.2s;
+
+} */
+
+@keyframes loaderExit {
+
+    to {
+
+        opacity: 0;
+
+        visibility: hidden;
+
+        transform: scale(1.08);
+
+    }
+
+}
+

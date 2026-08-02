@@ -1,0 +1,36 @@
+:root{
+
+    /* Background */
+
+    --bg:#F7F9FC;
+    --bg-secondary:#EEF3FF;
+
+    /* Card */
+
+    --card:rgba(255,255,255,.75);
+
+    /* Text */
+
+    --heading:#1E293B;
+    --text:#475569;
+    --white:#ffffff;
+
+    /* Brand */
+
+    --primary:#2563EB;
+    --primary-hover:#1D4ED8;
+
+    --accent:#38BDF8;
+
+    /* Border */
+
+    --border:#D6E4FF;
+
+    /* Shadow */
+
+    --shadow:0 12px 40px rgba(37,99,235,.12);
+
+    --radius:18px;
+
+    --transition:.35s ease;
+}

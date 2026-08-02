@@ -1,0 +1,91 @@
+.fade-up {
+
+    opacity: 0;
+
+    transform: translateY(40px);
+
+    transition: .8s;
+
+}
+
+.fade-up.show {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+}
+
+.zoom {
+
+    transition: .4s;
+
+}
+
+.zoom:hover {
+
+    transform: scale(1.04);
+
+}
+
+.float {
+
+    animation: float 4s ease-in-out infinite;
+
+}
+
+@keyframes float {
+
+    0% {
+
+        transform: translateY(0);
+
+    }
+
+    50% {
+
+        transform: translateY(-12px);
+
+    }
+
+    100% {
+
+        transform: translateY(0);
+
+    }
+
+}
+
+/* ===========================
+   PAGE REVEAL
+=========================== */
+
+.page-reveal {
+
+    animation: pageReveal .9s ease;
+
+}
+
+@keyframes pageReveal {
+
+    0% {
+
+        opacity: 0;
+
+        transform: translateY(35px);
+
+        filter: blur(8px);
+
+    }
+
+    100% {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+        filter: blur(0);
+
+    }
+
+}

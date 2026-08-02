@@ -1,0 +1,19 @@
+.progress-top {
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    height: 4px;
+
+    background: linear-gradient(90deg,
+            #2563EB,
+            #7C3AED);
+
+    z-index: 999999;
+
+    transition: .1s;
+
+}
