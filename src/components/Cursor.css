@@ -1,0 +1,49 @@
+.cursor{
+
+position:fixed;
+
+width:22px;
+
+height:22px;
+
+border-radius:50%;
+
+background:rgba(37,99,235,.28);
+
+backdrop-filter:blur(8px);
+
+border:2px solid #2563EB;
+
+pointer-events:none;
+
+transform:translate(-50%,-50%);
+
+transition:
+
+width .25s,
+
+height .25s,
+
+background .25s,
+
+transform .08s linear;
+
+z-index:999999;
+
+box-shadow:
+
+0 0 25px #2563EB,
+
+0 0 50px rgba(37,99,235,.4);
+
+}
+
+.cursor-grow{
+
+width:60px;
+
+height:60px;
+
+background:rgba(37,99,235,.18);
+
+}

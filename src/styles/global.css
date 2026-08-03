@@ -226,10 +226,11 @@ button {
 
 .btn:hover {
 
-    transform: translateY(-6px);
+    transform: translateY(-6px) scale(1.05);
 
     box-shadow:
-        0 20px 40px rgba(37, 99, 235, .35);
+
+        0 20px 45px rgba(37, 99, 235, .35);
 
 }
 
@@ -289,5 +290,11 @@ button {
         width: 220px;
 
     }
+
+}
+
+* {
+
+    cursor: none;
 
 }

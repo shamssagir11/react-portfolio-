@@ -3,6 +3,8 @@ import Loader from "./components/Loader";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import ScrollProgress from "./components/ScrollProgress";
+import Cursor from "./components/Cursor";
+import Aurora from "./components/Aurora";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -21,7 +23,9 @@ function App() {
 
   return (
     <>
-    <ScrollProgress/>
+      <Aurora />
+      <Cursor />
+      <ScrollProgress />
       <Navbar />
       <Home />
     </>
